@@ -1,0 +1,204 @@
+JavaScript is used to create client-side dynamic pages.
+JavaScript is an object-based scripting language which is lightweight and cross-platform.
+JavaScript is not a compiled language, but it is a translated language.
+The JavaScript Translator (embedded in the browser) is responsible for translating the JavaScript code for the web browser.
+It was introduced in the year 1995 for adding programs to the webpages in the Netscape Navigator browser.
+The traditional website uses js to provide several forms of interactivity and simplicity.
+JavaScript has no connectivity with Java programming language.
+ In addition to web browsers, databases such as CouchDB and MongoDB uses JavaScript as their scripting and query language.
+ 
+ FEATURES OF JAVASCRIPT:
+ 1.All popular web browsers support JavaScript as they provide built-in execution environments.
+ 2.JavaScript follows the syntax and structure of the C programming language. Thus, it is a structured programming language.
+ 3.JavaScript is an object-oriented programming language that uses prototypes rather than using classes for inheritance.
+ 4.It is a light-weighted and interpreted language.
+ 5.case sensitive language
+ 6.JavaScript is supportable in several operating systems including, Windows, macOS, etc.
+ 
+ APPLICATIONS OF JAVASCRIPT:
+ JavaScript is used to create interactive websites.
+ ->Client-side validation,
+->Dynamic drop-down menus,
+->Displaying date and time,
+->Displaying pop-up windows and dialog boxes (like an alert dialog box, confirm dialog box and prompt dialog box),
+->Displaying clocks etc.
+
+Syntax:
+<script>
+document.write("Hello JS");
+</script>
+
+JavaScript provides 3 places to put the JavaScript code:
+within body tag, within head tag and external JavaScript file.
+
+<script type="text/javascript">
+document.write("Javascript");
+</script>
+
+JAVASCRIPT VARIABLE:
+There are two types of variables in JavaScript :
+local variable and global variable.
+There are some rules while declaring a JavaScript variable (also known as identifiers).
+1.Name must start with a letter (a to z or A to Z), underscore( _ ), or dollar( $ ) sign.
+2.After first letter we can use digits (0 to 9), for example value1.
+3.JavaScript variables are case sensitive, for example x and X are different variables.
+correct:var _value="sonoo";  
+incorrect: var *aa=100;
+
+EXAMPLE:
+<script>  
+var x = 10;  
+var y = 20;  
+var z=x+y;  
+document.write(z);  
+</script>  
+
+Declaring JavaScript global variable within function:
+to declare this e use window object.
+Now it can be declared inside any function and can be accessed from any function. For example:
+example:
+<html>
+<body>
+<script>
+function m(){
+window.value=100; //global variable
+}
+function n(){
+alert(window.value);
+document.write(window.value);
+}
+m();
+n();
+</script>
+</body>
+</html>
+
+JAVASCRIPT DATA TYPES:
+1.Primitive data type
+2.Non-primitive (reference) data type
+
+JavaScript is a dynamic type language, means you don't need to specify type of the variable 
+because it is dynamically used by JavaScript engine.
+
+It can hold any type of values such as numbers, strings etc
+var b="rahul";
+var a=10;
+
+JS primitive data types:
+Data         Type	Description
+String	    represents sequence of characters e.g. "hello"
+Number	    represents numeric values e.g. 100
+Boolean	    represents boolean value either false or true
+Undefined   represents undefined value
+Null        represents null i.e. no value at all
+
+JS non-primitive data type:
+Data Type   	Description
+Object     	represents instance through which we can access members
+Array     	represents group of similar values
+RegExp    	represents regular expression
+
+JavaScript Operators
+JavaScript operators are symbols that are used to perform operations on operands. 
+
+There are following types of operators in JavaScript.
+
+Arithmetic Operators
+Comparison (Relational) Operators
+Bitwise Operators
+Logical Operators
+Assignment Operators
+Special Operators
+
+JS LOOP:
+<script>  
+var i=11;  
+while (i<=15)  
+{  
+document.write(i + "<br/>");  
+i++;  
+}  
+</script>  
+
+JavaScript Function Methods:
+Method	      Description
+apply()->	It is used to call a function contains this value and a single array of arguments.
+bind() ->	It is used to create a new function.
+call() ->	It is used to call a function contains this value and an argument list.
+toString()->	It returns the result in a form of a string.
+
+JavaScript Function Object Examples
+<script>  
+var add=new Function("num1","num2","return num1+num2");  
+document.writeln(add(2,5));  
+</script> 
+
+JAVASCRIPT OBJECTS:
+A javaScript object is an entity having state and behavior (properties and method).
+For example: car, pen, bike, chair, glass, keyboard, monitor etc.
+JavaScript is template based not class based. Here, we don't create class to get the object.
+But, we direct create objects.
+
+Creating Objects in JavaScript:
+there are three ways to create objects in javascript.
+->By object literal
+->By creating instance of Object directly (using new keyword)
+->By using an object constructor (using new keyword)
+
+1) JavaScript Object by object literal:
+SYNAX:
+object={property1:value1,property2:value2.....propertyN:valueN}  
+EXAMPLE:
+<script>  
+emp={id:102,name:"Shyam Kumar",salary:40000}  
+document.write(emp.id+" "+emp.name+" "+emp.salary);  
+</script>  
+
+2) By creating instance of Object:
+SYNTAX:
+var objectname=new Object();  
+EXAMPLE:
+<script>  
+var emp=new Object();  
+emp.id=101;  
+emp.name="Ravi Malik";  
+emp.salary=50000;  
+document.write(emp.id+" "+emp.name+" "+emp.salary);  
+</script>  
+
+3) By using an Object constructor
+SYNTAX:
+<script>  
+function emp(id,name,salary){  
+this.id=id;  
+this.name=name;  
+this.salary=salary;  
+}  
+e=new emp(103,"Vimal Jaiswal",30000);  
+  
+document.write(e.id+" "+e.name+" "+e.salary);  
+</script>  
+
+JavaScript Object Methods:
+
+S.No	    Methods                                                    	Description
+1	Object.assign()	                  This method is used to copy enumerable and own properties from a source object to a target object
+2	Object.create()	                  This method is used to create a new object with the specified prototype object and properties.
+3	Object.defineProperty()              	This method is used to describe some behavioral attributes of the property.
+4	Object.defineProperties()	            This method is used to create or configure multiple object properties.
+5	Object.entries()	                      This method returns an array with arrays of the key, value pairs.
+6	Object.freeze()	                          This method prevents existing properties from being removed.
+7	Object.getOwnPropertyDescriptor()       	This method returns a property descriptor for the specified property of the specified object.
+8	Object.getOwnPropertyDescriptors()        	This method returns all own property descriptors of a given object.
+9	Object.getOwnPropertyNames()                	This method returns an array of all properties (enumerable or not) found.
+10	Object.getOwnPropertySymbols()	                 This method returns an array of all own symbol key properties.
+11	Object.getPrototypeOf()	                         This method returns the prototype of the specified object.
+12	Object.is()	                                     This method determines whether two values are the same value.
+13	Object.isExtensible()	                            This method determines if an object is extensible
+14	Object.isFrozen()                                  	This method determines if an object was frozen.
+15	Object.isSealed()                              	This method determines if an object is sealed.
+16	Object.keys()                               	This method returns an array of a given object's own property names.
+17	Object.preventExtensions()	                              This method is used to prevent any extensions of an object.
+18	Object.seal()	                               This method prevents new properties from being added and marks all existing properties as non-configurable.
+19	Object.setPrototypeOf()	                                    This method sets the prototype of a specified object to another object.
+20	Object.values()	                                    This method returns an array of values.
